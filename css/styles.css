@@ -1,0 +1,379 @@
+.material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
+
+:root {
+    --font-color-primary: #333;
+    --font-color-first-title: #000;
+    --font-color-first-p: #4f4f4f;
+    --font-color-secundary: #828282;
+    --lists-color: #F2994A;
+    --specification-text: #BDBDBD;
+    --footer-font-color: #828282;
+    --font-family-primary: "Montserrat";
+    --font-family-secundary: "Playfair Display";
+    --bg-color: #FAFAFA;
+}
+
+.material-icons.md-18 {
+    font-size: 18px;
+}
+
+.material-icons.orange600 {
+    color: var(--lists-color);
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: var(--font-family-primary), Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--font-color-primary);
+}
+
+.main-container {
+    padding: 2rem 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: min(100%, 31.25rem);
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+.main-container .introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-container .introduction .introduction-title {
+    font-family: var(--font-family-secundary);
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-weight: 700;
+    color: var(--font-color-first-title);
+}
+
+.main-container .introduction .introduction-container {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-container .introduction .introduction-container img {
+    margin-top: .25rem;
+}
+
+.introduction .introduction-container .introduction-text {
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
+    color: var(--font-color-first-p);
+    font-weight: 500;
+    width: min(100%, 37rem);
+}
+
+.main-container .introduction .img-container img {
+    width: min(100%, 60.5625rem);
+    height: auto;
+}
+
+.main-container .body {
+    display: flex;
+    flex-direction: column;
+    gap: 2.85rem;
+}
+
+.main-container .body .specifications .specifications-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+
+.body .specifications .time-item {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+}
+
+.body .specifications .time-item.yields {
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+
+
+.body .specifications .yields .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.body .specifications .text-container .text {
+    font-size: clamp(.5rem, 2vw, .625rem);
+    font-weight: 700;
+    display: block;
+    color: var(--specification-text);
+    text-transform: uppercase;
+}
+
+.body .specifications .yields .text-container .text.styles-yield {
+    font-size: clamp(.625rem, 2vw, .75rem);
+    font-weight: 500;
+    color: var(--lists-color);
+    text-transform: none;
+}
+
+.body .specifications .time-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body .specifications .time-container .time-item {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    align-items: center;
+}
+
+.body .specifications .text-container .text.styles-time {
+    font-size: clamp(.625rem, 2vw, .75rem);
+    color: var(--font-color-primary);
+    text-transform: none;
+    font-weight: 500;
+}
+
+.main-container .body .main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.body .main-content .ingredients .ingredients-title {
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: 700;
+    font-family: var(--font-family-secundary);
+    margin-bottom: 1.75rem;
+}
+
+.body .main-content .ingredients .desserts {
+    padding-left: .125rem;
+}
+
+
+.body .main-content .ingredients .desserts h3 {
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    font-weight: 400;
+    font-family: var(--font-family-secundary);
+    font-style: italic;
+}
+
+.body .main-content .ingredients .desserts ul {
+    margin: 1.5rem 0 2.5rem;
+}
+
+.body .main-content .ingredients .desserts ul>li {
+    list-style: none;
+}
+
+/*Estilizando los checkboxes*/
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 12px;
+    font-size: clamp(.875rem, 2vw, 1rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container .checkmark {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 3px;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    background-color: #eee;
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox-container .checkmark .material-icons {
+    color: white;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #2196f3;
+}
+
+.checkbox-container input:checked~.checkmark .material-icons {
+    transform: scale(1);
+}
+
+.main-container .body .main-content .instructions .instructions-title {
+    margin-bottom: 1.775rem;
+    font-family: var(--font-family-secundary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.main-container .body .main-content .instructions .instructions-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.body .main-content .instructions .list-container {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-content .instructions .list-container .index {
+    display: inline-flex;
+    align-items: center;
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 4px;
+    background: var(--lists-color);
+}
+
+.main-content .instructions .list-container .index span {
+    font-family: var(--font-family-secundary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--bg-color);
+}
+
+.main-content .instructions .list-container .content {
+    padding: .25rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+}
+
+.main-container .body .main-content .source {
+    margin-top: 1.625rem;
+    color: var(--specification-text);
+    font-size: clamp(0.75rem, 2vw, 1rem);
+    font-weight: 400;
+}
+
+.main-container .body .main-content .source a {
+    text-decoration: none;
+    color: var(--specification-text);
+}
+
+.footer {
+    margin: 3rem 0 .75rem;
+}
+
+.footer p {
+    font-family: var(--font-family-primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    color: var(--footer-font-color);
+}
+
+@media screen and (min-width: 48em) {
+    .main-container {
+        width: min(100%, 60.625rem);
+        gap: 3rem;
+    }
+
+    .main-container .body {
+        flex-direction: row-reverse;
+    }
+
+    .body .specifications .time-container {
+        flex-direction: column;
+    }
+
+    .body .specifications {
+        flex: 1;
+    }
+
+    .main-container .body .specifications {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main-container .body .specifications .specifications-container {
+        width: min(85%, 13.5rem);
+        height: min(30%, 23rem);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: .825rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: center;
+        gap: 0;
+    }
+
+    .body .specifications .time-item.yields {
+        grid-column: span 1;
+    }
+
+    .material-icons.md-18 {
+        font-size: 28px;
+    }
+
+
+    .body .specifications .time-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: space-evenly;
+    }
+
+    .body .main-content {
+        flex: 2;
+    }
+
+    .checkbox-container .checkmark {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
